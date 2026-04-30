@@ -1,0 +1,94 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>ITOT Lucknow</title>
+    <link rel="stylesheet" href="../CSS/style.css">
+</head>
+<body>
+
+<nav class="navbar">
+    <div class="logo">ITOT</div>
+    <ul class="nav-links">
+        <li><a href="#home">Home</a></li>
+        <li><a href="#about">About</a></li>
+        <li><a href="#courses">Courses</a></li>
+        <li><a href="#gallery">Gallery</a></li>
+        <li><a href="#contact">Contact</a></li>
+    </ul>
+</nav>
+
+<!-- HERO -->
+<section id="home" class="hero">
+    <div class="overlay"></div>
+
+    <div class="content">
+        <h1>ITOT Lucknow</h1>
+        <p>
+            ITOT Lucknow is dedicated to excellence in technical education,  
+            empowering students with knowledge, skills, and innovation.
+        </p>
+
+        <a href="#about" class="btn">Know more about my college</a>
+    </div>
+    
+    <div class="scroll-down"></div>
+</section>
+
+<!-- ABOUT -->
+<section id="about" class="about">
+    <h2>About ITOT Lucknow</h2>
+    <p>
+        ITOT Lucknow provides quality education with modern infrastructure,
+        experienced faculty, and industry-focused training programs.
+    </p>
+</section>
+
+<!-- COURSES -->
+<section id="courses" class="courses">
+    <h2>Our Courses</h2>
+
+    <div class="card-container">
+        <div class="card">
+            <h3>BCA</h3>
+            <p>Learn programming, web development, and software skills.</p>
+        </div>
+
+        <div class="card">
+            <h3>BBA</h3>
+            <p>Build management and business skills for future leaders.</p>
+        </div>
+
+        <div class="card">
+            <h3>Diploma</h3>
+            <p>Technical education with practical industry training.</p>
+        </div>
+    </div>
+</section>
+
+<!-- GALLERY -->
+<section id="gallery" class="gallery">
+    <h2>Campus Gallery</h2>
+
+    <div class="gallery-grid">
+        <img src="../Images/img1.jpeg">
+        <img src="../Images/img2.jpeg">
+        <img src="../Images/img3.jpeg">
+    </div>
+</section>
+
+<!-- FOOTER -->
+<footer id="contact" class="footer">
+    <p>© 2026 ITOT Lucknow | All Rights Reserved</p>
+</footer>
+
+<script>
+window.addEventListener("scroll", function() {
+    const navbar = document.querySelector(".navbar");
+    navbar.classList.toggle("scrolled", window.scrollY > 50);
+});
+</script>
+
+</body>
+</html>

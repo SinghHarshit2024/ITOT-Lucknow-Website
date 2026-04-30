@@ -1,0 +1,313 @@
+/* =========================
+   GLOBAL RESET
+========================= */
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    font-family: Arial, sans-serif;
+}
+
+/* =========================
+   HERO SECTION (Homepage Top)
+========================= */
+.hero {
+    height: 100vh; /* full screen height */
+    width: 100%;
+
+    /* background image + dark overlay */
+    background:
+        linear-gradient(rgba(0, 0, 0, 0.45), rgba(0, 0, 0, 0.45)),
+        url('../Images/college.jpeg') no-repeat center center/cover;
+
+    display: flex;
+    align-items: center;      /* vertical center */
+    justify-content: center;  /* horizontal center */
+    text-align: center;
+}
+
+/* overlay disabled (not used now) */
+.overlay {
+    display: none;
+}
+
+/* =========================
+   HERO CONTENT (Text Area)
+========================= */
+.content {
+    color: white;
+    max-width: 700px;
+    padding: 20px;
+
+    /* animation on load */
+    animation: fadeIn 1.5s ease-in-out;
+}
+
+/* main heading */
+.content h1 {
+    font-size: 60px;
+    margin-bottom: 15px;
+    font-weight: bold;
+    letter-spacing: 1px;
+}
+
+/* paragraph text */
+.content p {
+    font-size: 18px;
+    margin-bottom: 25px;
+    line-height: 1.6;
+}
+
+/* =========================
+   BUTTON (Call To Action)
+========================= */
+.btn {
+    display: inline-block;
+    padding: 14px 30px;
+    background: #ffd700; /* yellow */
+    color: black;
+    font-weight: bold;
+    text-decoration: none;
+    border-radius: 30px;
+    transition: 0.3s;
+}
+
+/* button hover effect */
+.btn:hover {
+    background: white;
+    transform: scale(1.05);
+}
+
+/* =========================
+   NAVBAR (Top Menu)
+========================= */
+.navbar {
+    position: fixed; /* stays on top */
+    top: 0;
+    width: 100%;
+    padding: 20px 60px;
+
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+
+    z-index: 1000;
+    transition: 0.3s;
+}
+
+/* navbar after scroll */
+.navbar.scrolled {
+    background: rgba(0, 0, 0, 0.7);
+    backdrop-filter: blur(8px);
+}
+
+/* logo text */
+.logo {
+    color: white;
+    font-size: 24px;
+    font-weight: bold;
+}
+
+/* nav links container */
+.nav-links {
+    list-style: none;
+    display: flex;
+    gap: 30px;
+}
+
+/* nav links */
+.nav-links a {
+    color: white;
+    text-decoration: none;
+    font-size: 16px;
+    transition: 0.3s;
+}
+
+/* nav hover */
+.nav-links a:hover {
+    color: #ffd700;
+}
+
+/* =========================
+   SCROLL DOWN INDICATOR
+========================= */
+.scroll-down {
+    position: absolute;
+    bottom: 30px;
+    width: 30px;
+    height: 50px;
+    border: 2px solid white;
+    border-radius: 25px;
+}
+
+/* moving dot inside scroll icon */
+.scroll-down::after {
+    content: '';
+    position: absolute;
+    top: 10px;
+    left: 50%;
+    width: 6px;
+    height: 6px;
+    background: white;
+    transform: translateX(-50%);
+    border-radius: 50%;
+    animation: scroll 1.5s infinite;
+}
+
+/* scroll animation */
+@keyframes scroll {
+    0% { opacity: 0; top: 10px; }
+    50% { opacity: 1; top: 20px; }
+    100% { opacity: 0; top: 30px; }
+}
+
+/* =========================
+   FADE-IN ANIMATION
+========================= */
+@keyframes fadeIn {
+    from {
+        opacity: 0;
+        transform: translateY(30px);
+    }
+    to {
+        opacity: 1;
+        transform: translateY(0);
+    }
+}
+
+/* =========================
+   ABOUT SECTION
+========================= */
+.about {
+    padding: 80px 20px;
+    text-align: center;
+}
+
+.about h2 {
+    font-size: 36px;
+    margin-bottom: 20px;
+}
+
+.about p {
+    max-width: 600px;
+    margin: auto;
+    font-size: 18px;
+    color: #555;
+}
+
+/* =========================
+   COURSES SECTION
+========================= */
+.courses {
+    padding: 80px 20px;
+    text-align: center;
+    background: #f9f9f9;
+}
+
+.courses h2 {
+    font-size: 36px;
+    margin-bottom: 40px;
+}
+
+/* cards container */
+.card-container {
+    display: flex;
+    justify-content: center;
+    gap: 30px;
+    flex-wrap: wrap;
+}
+
+/* individual card */
+.card {
+    background: white;
+    padding: 30px;
+    width: 250px;
+    border-radius: 10px;
+    box-shadow: 0 5px 20px rgba(0, 0, 0, 0.1);
+    transition: 0.3s;
+}
+
+/* hover effect */
+.card:hover {
+    transform: translateY(-10px);
+}
+
+/* =========================
+   GALLERY SECTION
+========================= */
+.gallery {
+    position: relative;
+    padding: 80px 20px;
+    text-align: center;
+}
+
+/* heading always on top */
+.gallery h2 {
+    position: relative;
+    z-index: 2;
+    margin-bottom: 50px;
+}
+
+/* grid layout */
+.gallery-grid {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
+    gap: 15px;
+    grid-auto-rows: 250px;
+}
+
+/* images */
+.gallery-grid img {
+    width: 100%;
+    height: 250px;
+    object-fit: cover; /* fix different image sizes */
+    border-radius: 10px;
+    transition: 0.3s;
+    position: relative;
+    z-index: 1;
+}
+
+/* hover zoom */
+.gallery-grid img:hover {
+    transform: scale(1.08);
+}
+
+/* =========================
+   FOOTER
+========================= */
+.footer {
+    background: #111;
+    color: white;
+    text-align: center;
+    padding: 20px;
+}
+
+/* =========================
+   SMOOTH SCROLL
+========================= */
+html {
+    scroll-behavior: smooth;
+}
+
+/* fix navbar overlap issue */
+section {
+    scroll-margin-top: 80px;
+}
+
+/* =========================
+   RESPONSIVE (Mobile)
+========================= */
+@media (max-width: 768px) {
+
+    .content h1 {
+        font-size: 35px;
+    }
+
+    .content p {
+        font-size: 16px;
+    }
+
+    .nav-links {
+        gap: 15px;
+    }
+}
