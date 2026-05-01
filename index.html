@@ -4,13 +4,15 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>ITOT Lucknow</title>
-    <link rel="stylesheet" href="style.css">
+    <link rel="stylesheet" href="../CSS/style.css">
 </head>
 <body>
+
 
 <nav class="navbar">
     <div class="logo">ITOT</div>
      <div class="menu-toggle">&#9776;</div>
+
     <ul class="nav-links">
         <li><a href="#home">Home</a></li>
         <li><a href="#about">About</a></li>
@@ -41,8 +43,8 @@
 <section id="about" class="about">
     <h2>About ITOT Lucknow</h2>
     <p>
-        ITOT Lucknow provides quality education with modern infrastructure,
-        experienced faculty, and industry-focused training programs.
+       ITOT (Institute of Training of Trainers) Lucknow stands as a premier center of excellence dedicated to bridging the gap between academic knowledge and industrial expertise. By providing high-quality vocational education, the institute focuses on creating a robust learning environment characterized by modern infrastructure and state-of-the-art laboratory facilities.
+
     </p>
 </section>
 
@@ -52,19 +54,48 @@
 
     <div class="card-container">
         <div class="card">
-            <h3>BCA</h3>
-            <p>Learn programming, web development, and software skills.</p>
+            <h3>CSA</h3>
+            <p>Master professional software design and development for high-demand tech careers.</p>
         </div>
 
         <div class="card">
-            <h3>BBA</h3>
-            <p>Build management and business skills for future leaders.</p>
+            <h3>CHNM</h3>
+            <p>Master the technical skills to repair computer systems and manage secure network infrastructures.</p>
         </div>
 
         <div class="card">
-            <h3>Diploma</h3>
-            <p>Technical education with practical industry training.</p>
+            <h3>Electrician</h3>
+            <p>Master the technical skills required to install, maintain, and repair electrical systems for residential and commercial infrastructure</p>
         </div>
+        <div class="card">
+            <h3>Fitter</h3>
+            <p>Gain expertise in precisely sizing, assembling, and maintaining industrial machinery and metal components.</p>
+        </div>
+        <div class="card">
+            <h3>MRAC</h3>
+            <p>Master the installation and repair of cooling systems, from domestic refrigerators to large-scale industrial HVAC units.</p>
+        </div>
+        <div class="card">
+            <h3>Sewing Technology</h3>
+            <p>Develop professional skills in garment construction, apparel design, and the operation of industrial sewing machinery.</p>
+        </div>
+        <div class="card">
+            <h3>Draughtsman (Civil)</h3>
+            <p>Master the art of creating detailed technical drawings and blueprints for buildings, bridges, and infrastructure projects.</p>
+        </div>
+        <div class="card">
+            <h3>Draughtsman (Mechanical)</h3>
+            <p>Learn to produce precise technical plans and 3D models for machinery, mechanical parts, and manufacturing tools.</p>
+        </div>
+        <div class="card">
+            <h3>Draughtsman (Mechanical)</h3>
+            <p>Learn to produce precise technical plans and 3D models for machinery, mechanical parts, and manufacturing tools.</p>
+        </div>
+        <div class="card">
+            <h3>Draughtsman (Mechanical)</h3>
+            <p>Learn to produce precise technical plans and 3D models for machinery, mechanical parts, and manufacturing tools.</p>
+        </div>
+        
     </div>
 </section>
 
@@ -73,16 +104,77 @@
     <h2>Campus Gallery</h2>
 
     <div class="gallery-grid">
-        <img src="img1.jpeg">
-        <img src="img2.jpeg">
-        <img src="img3.jpeg">
+        <img src="../Images/img1.jpeg">
+        <img src="../Images/img2.jpeg">
+        <img src="../Images/img3.jpeg">
+        <img src="../Images/img4.jpeg">
+        <img src="../Images/img5.jpeg">
+        <img src="../Images/img6.jpeg">
     </div>
 </section>
+
+<!-- Stats -->
+<section class="stats">
+    <div class="stat">
+        <h2>1000+</h2>
+        <p>Students</p>
+    </div>
+    <div class="stat">
+        <h2>50+</h2>
+        <p>Faculty</p>
+    </div>
+    <div class="stat">
+        <h2>20+</h2>
+        <p>Courses</p>
+    </div>
+</section>
+
+<section class="testimonials">
+    <h2>What Students Say</h2>
+
+    <div class="testimonial">
+        <p>"Great college with amazing faculty and facilities."</p>
+        <h4>- Student</h4>
+    </div>
+
+    <div class="testimonial">
+        <p>"Helped me build my career in IT field."</p>
+        <h4>- Alumni</h4>
+    </div>
+</section>
+
+<section id="contact" class="contact">
+    <h2>Contact Us</h2>
+
+    <div class="contact-container">
+        
+        <!-- Left: Info -->
+        <div class="contact-info">
+            <h3>ITOT Lucknow</h3>
+            <p>Lucknow, Uttar Pradesh, India</p>
+            <p>Email: info@itot.com</p>
+            <p>Phone: +91 9876543210</p>
+        </div>
+
+        <!-- Right: Form -->
+        <form class="contact-form">
+            <input type="text" placeholder="Your Name" required>
+            <input type="email" placeholder="Your Email" required>
+            <textarea rows="5" placeholder="Your Message" required></textarea>
+            <button type="submit" class="btn">Send Message</button>
+        </form>
+
+    </div>
+</section>
+
+
 
 <!-- FOOTER -->
 <footer id="contact" class="footer">
     <p>© 2026 ITOT Lucknow | All Rights Reserved</p>
 </footer>
+
+<button id="topBtn">↑</button>
 
 <script>
 window.addEventListener("scroll", function() {
@@ -98,6 +190,18 @@ const navLinks = document.querySelector(".nav-links");
 toggle.addEventListener("click", () => {
     navLinks.classList.toggle("active");
 });
+</script>
+
+<script>
+const topBtn = document.getElementById("topBtn");
+
+window.onscroll = function() {
+    topBtn.style.display = window.scrollY > 300 ? "block" : "none";
+};
+
+topBtn.onclick = function() {
+    window.scrollTo({ top: 0, behavior: 'smooth' });
+};
 </script>
 
 </body>
